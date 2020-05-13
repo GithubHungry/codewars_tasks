@@ -254,7 +254,6 @@ in all possible orders.
 permutations('a'); # ['a']
 permutations('ab'); # ['ab', 'ba']
 permutations('aabb'); # ['aabb', 'abab', 'abba', 'baab', 'baba', 'bbaa']"""
-g
 import itertools
 
 
@@ -276,3 +275,15 @@ def convert_time(seconds: int):
 
 
 # task 18
+"""Explosive Sum"""
+
+
+def sum_exp(n: int):
+    table = [0] * (n + 1)
+    table[0] = 1
+    for i in range(1, n):
+        for j in range(i, n + 1):
+            table[j] += table[j - i]
+    return table[n] + 1
+
+# task 19
