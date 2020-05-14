@@ -286,4 +286,17 @@ def sum_exp(n: int):
             table[j] += table[j - i]
     return table[n] + 1
 
+
 # task 19
+"""You are going to be given an array of integers. Your job is to take that array and find an index N where the 
+sum of the integers to the left of N is equal to the sum of the integers to the right of N. If there is no index 
+that would make this happen, return -1."""
+
+
+def sum_equal(arr: list):
+    for index in range(len(arr)):
+        if sum(arr[:index]) == sum(arr[index + 1:]):
+            return index
+    return -1
+
+# task 20
