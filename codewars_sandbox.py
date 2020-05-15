@@ -299,4 +299,26 @@ def sum_equal(arr: list):
             return index
     return -1
 
+
 # task 20
+"""Matrix determinant"""
+import numpy as np
+
+
+def mat_det(matrix: list):
+    return int(round(np.linalg.det(matrix)))
+
+
+# task 21
+"""Interval sum"""
+
+
+def interval_sum(list_of_intervals):
+    final_list = []
+    for interval in list_of_intervals:
+        for elem in range(interval[0], interval[1]):
+            final_list.append(elem)
+    return len(set(final_list))
+
+
+# task 22
