@@ -322,3 +322,4 @@ def interval_sum(list_of_intervals):
 
 
 # task 22
+print('check')
