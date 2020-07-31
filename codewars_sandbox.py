@@ -302,7 +302,9 @@ def sum_equal(arr: list):
 
 # task 20
 """Matrix determinant"""
-import numpy as np
+
+
+# import numpy as np
 
 
 def mat_det(matrix: list):
@@ -322,4 +324,18 @@ def interval_sum(list_of_intervals):
 
 
 # task 22
-print('check')
+def binary_search(arr: list, item: int):
+    low = 0
+    high = len(arr) - 1
+    while low <= high:
+        mid = int((low + high) / 2)
+        guess = arr[mid]
+        if guess == item:
+            return mid
+        elif guess < item:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return None
+
+# task 23
